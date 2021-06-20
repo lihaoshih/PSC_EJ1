@@ -238,6 +238,18 @@
               "target": "Package",
               "version": "[3.1.5, )"
             },
+            "Syncfusion.EJ": {
+              "target": "Package",
+              "version": "[19.1.0.69, )"
+            },
+            "Syncfusion.EJ.AspNet.Core": {
+              "target": "Package",
+              "version": "[19.1.0.69, )"
+            },
+            "Syncfusion.EJ.Export": {
+              "target": "Package",
+              "version": "[19.1.0.69, )"
+            },
             "Syncfusion.EJ2.AspNet.Core": {
               "target": "Package",
               "version": "[19.1.0.69, )"

@@ -53,6 +53,9 @@
          <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.16" />
          <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
          <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+         <PackageReference Include="Syncfusion.EJ" Version="19.1.0.69" />
+         <PackageReference Include="Syncfusion.EJ.AspNet.Core" Version="19.1.0.69" />
+         <PackageReference Include="Syncfusion.EJ.Export" Version="19.1.0.69" />
          <PackageReference Include="Syncfusion.EJ2.AspNet.Core" Version="19.1.0.69" />
          <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>

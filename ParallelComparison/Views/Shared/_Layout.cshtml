@@ -12,6 +12,7 @@
     <!-- ================== BEGIN core-css ================== -->
     <link href="~/css/GoogleFonts/icons/material.css" rel="stylesheet" />
     <link href="~/css/app.min.css" rel="stylesheet" />
+    <link href="~/css/ej/web/gradient-lime/ej.web.all.min.css")" rel="stylesheet" />
     @*Syncfusion Essential JS2 Styles*@
     <link rel="stylesheet" href="~/css/ej2/material.css" />
     <!-- ================== END core-css ================== -->
@@ -59,8 +60,13 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     @*Syncfusion Essential JS 2 Scripts*@
-    <script src="~/js/ej2.min.js"></script>
+    <script src="~/js/ej2/ej2.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="@Url.Content("~/js/jsrender.min.js")"></script>
+    <script src="@Url.Content("~/js/ej/ej.web.all.min.js")"></script>
+    <ej-script-manager></ej-script-manager>
+
     <ejs-scripts></ejs-scripts>
     <!-- ================== END core-js ================== -->
     @RenderSection("Scripts", required: false)
