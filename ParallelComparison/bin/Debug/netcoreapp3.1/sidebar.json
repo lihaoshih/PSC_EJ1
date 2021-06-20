@@ -1,0 +1,64 @@
+﻿{
+    "sidebarMenu": [
+        {
+            "text": "查核基本資料",
+            "is_header": true
+        },
+        {
+            "controller": "PLCInfo",
+            "action": "PLCInfoList",
+            "icon": "fa fa-microchip",
+            "text": "PLC資料維護"
+        },
+        {
+            "controller": "Home",
+            "action": "Index",
+            "icon": "fa fa-list-alt",
+            "text": "查核紀錄清單"
+        },
+        {
+            "controller": "Home",
+            "action": "Index",
+            "icon": "fa fa-edit",
+            "text": "查核資料維護"
+        },
+        {
+            "is_divider": true
+        },
+        {
+            "text": "數據彙整與計算",
+            "is_header": true
+        },
+        {
+            "controller": "Home",
+            "action": "Index",
+            "icon": "fa fa-file-import",
+            "text": "數據資料匯入"
+        },
+        {
+            "controller": "Home",
+            "action": "Index",
+            "icon": "fa fa-check-square",
+            "text": "數據資料篩檢"
+        },
+        {
+            "is_divider": true
+        },
+        {
+            "text": "查核結果",
+            "is_header": true
+        },
+        {
+            "controller": "Home",
+            "action": "Index",
+            "icon": "fa fa-table",
+            "text": "查核結果顯示"
+        },
+        {
+            "controller": "Home",
+            "action": "Index",
+            "icon": "fa fa-file-pdf",
+            "text": "查核報告下載"
+        }
+    ]
+}

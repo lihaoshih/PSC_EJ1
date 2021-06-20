@@ -1,0 +1,9 @@
+C:\RcetsGit\ParallelComparison\Library\bin\Debug\netcoreapp3.1\Library.deps.json
+C:\RcetsGit\ParallelComparison\Library\bin\Debug\netcoreapp3.1\Library.dll
+C:\RcetsGit\ParallelComparison\Library\bin\Debug\netcoreapp3.1\Library.pdb
+C:\RcetsGit\ParallelComparison\Library\obj\Debug\netcoreapp3.1\Library.csproj.AssemblyReference.cache
+C:\RcetsGit\ParallelComparison\Library\obj\Debug\netcoreapp3.1\Library.AssemblyInfoInputs.cache
+C:\RcetsGit\ParallelComparison\Library\obj\Debug\netcoreapp3.1\Library.AssemblyInfo.cs
+C:\RcetsGit\ParallelComparison\Library\obj\Debug\netcoreapp3.1\Library.csproj.CoreCompileInputs.cache
+C:\RcetsGit\ParallelComparison\Library\obj\Debug\netcoreapp3.1\Library.dll
+C:\RcetsGit\ParallelComparison\Library\obj\Debug\netcoreapp3.1\Library.pdb
