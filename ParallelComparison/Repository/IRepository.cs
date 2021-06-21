@@ -15,6 +15,6 @@ namespace ParallelComparison.Repository
 		Task UpdateAsync(T entity);
 		void Update(T entity);
 		Task DeleteAsync(string id);
-		void Delete(T entity);
+		void Delete(string id);
 	}
 }

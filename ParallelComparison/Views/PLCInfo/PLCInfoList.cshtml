@@ -1,6 +1,8 @@
 ﻿
-@using Syncfusion.EJ2
+@using Syncfusion.JavaScript
+@using Syncfusion.JavaScript.Models
 @using Newtonsoft.Json
+
 @{
 	ViewData["Title"] = "顯示PLC資訊";
 	Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,39 +10,60 @@
 
 <div style="color:#003E19; font-size:25px">PLC資訊維護</div>
 
-<div class="control-wrapper">
-    <ejs-grid id="Grid" dataSource="@ViewBag.datasource" allowTextWrap="true" allowFiltering="true" locale="zh_TW" allowPaging="true" toolbar="@(new List<string>(){"Add","Edit","Delete","Cancel"})" actionComplete="true">
-		<e-data-manager url="/PLCInfo/UrlDatasource" adaptor="UrlAdaptor"></e-data-manager>
-		<e-grid-editSettings allowAdding="true" allowDeleting="true" allowEditing="true" mode="Normal"></e-grid-editSettings>
-		<e-grid-textwrapsettings wrapMode="Header"></e-grid-textwrapsettings>
-		<e-grid-pagesettings pageCount="1" pageSizes="true"></e-grid-pagesettings>
-		<e-grid-columns>
-			<e-grid-column field="CNO"   headerText="管制編號" allowEditing="false" textAlign="Center" width="auto"></e-grid-column>
-			<e-grid-column field="PolNo" headerText="管道編號" allowEditing="false" textAlign="Center" width="auto"></e-grid-column>
-			<e-grid-column field="SignalType" headerText="訊號種類" textAlign="Center" width="auto"></e-grid-column>
-			<e-grid-column field="PLCBrand" headerText="廠牌" textAlign="Center" width="auto"></e-grid-column>
-			<e-grid-column field="PLCModel" headerText="型號" textAlign="Center"  width="auto"></e-grid-column>
-			<e-grid-column field="SelfAssembly" headerText="自行組裝" displayAsCheckBox="true" editType="" textAlign="Center" width="auto" type="boolean"></e-grid-column>
-			<e-grid-column field="PLCSerial" headerText="序號" textAlign="Center" width="auto"></e-grid-column>
-		</e-grid-columns>
-	</ejs-grid>
+<div id = "ControlRegioin">
+    <ej-grid id="FlatGrid"
+             allow-sorting="true"
+             selectiontype="Multiple"
+             allow-text-wrap="true"
+             allow-grouping="true" group-settings="@(new GroupSettings() { GroupedColumns = new List<string>() { "CNO" }})"
+             allow-filtering="true" filter-settings="@(new FilterSettings() { FilterType = FilterType.Excel })"
+             allow-paging="true"
+             allow-resize-to-fit="true"
+             >
+        <e-group-settings gouped-columns="CNO"></e-group-settings>
+        <e-edit-settings allow-adding="true" allow-editing="true" allow-deleting="true" edit-mode="@(EditMode.Normal)"></e-edit-settings>
+        <e-datamanager url="/PLCInfo/UrlDataSource" insert-url="/PLCInfo/Insert" update-url="/PLCInfo/Update" remove-url="/PLCInfo/Remove" adaptor="UrlAdaptor"></e-datamanager>
+        <e-toolbar-settings show-toolbar="true" toolbar-items=@(new List<string>() { "add", "edit", "update", "delete", "cancel" })></e-toolbar-settings>
+        <e-text-wrap-settings wrap-mode="Header"></e-text-wrap-settings>
+        <e-columns>
+            <e-column field="PipeNo" header-text="污染源編號" is-primary-key="true" allow-editing="false" text-align="Center"></e-column>
+            <e-column field="CNO" header-text="管制編號" allow-editing="false" visible="false" text-align="Center"></e-column>
+            <e-column field="PolNo" header-text="管道編號" allow-editing="false" text-align="Center"></e-column>
+            <e-column field="SignalType" header-text="訊號種類" text-align="Center"></e-column>
+            <e-column field="PLCBrand" header-text="廠牌" text-align="Center"></e-column>
+            <e-column field="PLCModel" header-text="型號" text-align="Center"></e-column>
+            <e-column field="SelfAssembly" header-text="自行組裝" display-as-checkbox="true" edit-type="BooleanEdit" text-align="Center"></e-column>
+            <e-column field="PLCSerial" header-text="序號" text-align="Center"></e-column>
+        </e-columns>
+    </ej-grid>
 </div>
 
 <style>
 .e-grid .e-rowcell {
-    background-color: #D1EDE1;
-    font-size: 16px;
+        border-style: solid;
+        border-width: 1px 0 0 0;
+        display: table-cell;
+        font-size: 16px;
+        line-height: 20px;
+        overflow: hidden;
+        padding: 8px 21px;
+        vertical-align: middle;
+        white-space: nowrap;
+        width: auto;
 }
 
-.e-grid .e-headercell {
+    .e-grid .e-headercell {
+        background-image: linear-gradient(#028C6A, #003E19);
+        color: white;
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+.e-columnheader {
     background-color: #003E19;
-    color: white;
-	font-weight: 700;
-    font-size: 30px;
 }
 
  .e-grid .e-headercelldiv {
-    background-color: #003E19;
     color: white;
     font-weight: 700;
     font-size: 18px;
@@ -51,10 +74,6 @@
 }
 
 .e-filtertext {
-	text-align: center;
-}
-
-.e-input, textarea.e-input, .e-input-group, .e-input-group.e-control-wrapper {
 	text-align: center;
 }
 

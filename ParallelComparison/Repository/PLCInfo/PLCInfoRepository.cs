@@ -269,12 +269,12 @@ namespace ParallelComparison.Repository.PLCInfo
 			await ExecuteAsync(connect);
 		}
 
-		public void Delete(PLCInfoModel pLCInfoModel)
+		public void Delete(string strPipeNo)
 		{
 			string strCNO, strPolNo;
 
-			strCNO = pLCInfoModel.CNO;
-			strPolNo = pLCInfoModel.PolNo;
+			strCNO = strPipeNo.Substring(0, 8);
+			strPolNo = strPipeNo.Substring(8, 4);
 
 			DynamicParameters param = new DynamicParameters();
 			param.Add("@MODE", "D");

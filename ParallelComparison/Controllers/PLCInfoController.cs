@@ -4,25 +4,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ParallelComparison.Models.PLCInfoData;
-using ParallelComparison.Repository;
-using Syncfusion.EJ2.QueryBuilder;
-using Newtonsoft.Json;
 using ParallelComparison.Repository.PLCInfo;
-using Syncfusion.EJ2.Base;
+using Syncfusion.JavaScript.DataSources;
+using Syncfusion.Linq;
+using Syncfusion.JavaScript;
 
 namespace ParallelComparison.Controllers
 {
 	public class PLCInfoController : Controller
 	{
 		private readonly IPLCInfoRepository _pLCInfoRepo;
-        public PLCInfoController(IPLCInfoRepository pLCInfoRepo)
-        {
-			_pLCInfoRepo = pLCInfoRepo;
-        }
 
-		public IActionResult UrlDataSource([FromBody]DataManagerRequest dm)
+		public static List<PLCInfoModel> plcdata = new List<PLCInfoModel>();
+		public PLCInfoController(IPLCInfoRepository pLCInfoRepo)
 		{
-			IEnumerable<PLCInfoModel> DataSource = _pLCInfoRepo.GetAll();
+			_pLCInfoRepo = pLCInfoRepo;
+		}
+
+		public IActionResult UrlDataSource([FromBody] DataManager dm)
+		{
+			IEnumerable<PLCInfoModel> DataSource = plcdata;
 			DataOperations operation = new DataOperations();
 
 			if (dm.Search != null && dm.Search.Count > 0)
@@ -30,7 +31,7 @@ namespace ParallelComparison.Controllers
 			if (dm.Sorted != null && dm.Sorted.Count > 0)
 				DataSource = operation.PerformSorting(DataSource, dm.Sorted);
 			if (dm.Where != null && dm.Where.Count > 0)
-				DataSource = operation.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+				DataSource = operation.PerformWhereFilter(DataSource, dm.Where, dm.Where[0].Operator);
 
 			int count = DataSource.Cast<PLCInfoModel>().Count();
 
@@ -46,8 +47,33 @@ namespace ParallelComparison.Controllers
 		//GET
 		public IActionResult PLCInfoList()
 		{
-			ViewBag.datasource = _pLCInfoRepo.GetAll();
+			plcdata = _pLCInfoRepo.GetAll();
+			ViewBag.datasource = plcdata;
 			return View();
 		}
+
+		public IActionResult Insert([FromBody]CRUDModel<PLCInfoModel> model)
+		{
+			_pLCInfoRepo.Create(model.Value);
+			plcdata = _pLCInfoRepo.GetAll();
+			return Json(plcdata);
+		}
+
+		public IActionResult Update([FromBody]CRUDModel<PLCInfoModel> model)
+		{
+			_pLCInfoRepo.Update(model.Value);
+			plcdata = _pLCInfoRepo.GetAll();
+			return Json(plcdata);
+		}
+
+		public IActionResult Remove([FromBody]CRUDModel<PLCInfoModel> model)
+		{
+			var key = model.Key.ToString();
+			_pLCInfoRepo.Delete(key);
+			plcdata = _pLCInfoRepo.GetAll();
+			return Json(plcdata);
+		}
+
+
 	}
 }

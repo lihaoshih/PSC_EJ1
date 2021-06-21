@@ -10,3 +10,15 @@ C:\RcetsGit\ParallelComparison\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csp
 C:\RcetsGit\ParallelComparison\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CopyComplete
 C:\RcetsGit\ParallelComparison\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.dll
 C:\RcetsGit\ParallelComparison\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Git\PSC_EJ1\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.deps.json
+C:\Git\PSC_EJ1\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.dll
+C:\Git\PSC_EJ1\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Git\PSC_EJ1\DataAccess\bin\Debug\netcoreapp3.1\Library.dll
+C:\Git\PSC_EJ1\DataAccess\bin\Debug\netcoreapp3.1\Library.pdb
+C:\Git\PSC_EJ1\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.AssemblyReference.cache
+C:\Git\PSC_EJ1\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfoInputs.cache
+C:\Git\PSC_EJ1\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfo.cs
+C:\Git\PSC_EJ1\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CoreCompileInputs.cache
+C:\Git\PSC_EJ1\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CopyComplete
+C:\Git\PSC_EJ1\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.dll
+C:\Git\PSC_EJ1\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.pdb

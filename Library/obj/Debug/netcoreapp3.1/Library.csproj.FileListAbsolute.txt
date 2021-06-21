@@ -7,3 +7,12 @@ C:\RcetsGit\ParallelComparison\Library\obj\Debug\netcoreapp3.1\Library.AssemblyI
 C:\RcetsGit\ParallelComparison\Library\obj\Debug\netcoreapp3.1\Library.csproj.CoreCompileInputs.cache
 C:\RcetsGit\ParallelComparison\Library\obj\Debug\netcoreapp3.1\Library.dll
 C:\RcetsGit\ParallelComparison\Library\obj\Debug\netcoreapp3.1\Library.pdb
+C:\Git\PSC_EJ1\Library\bin\Debug\netcoreapp3.1\Library.deps.json
+C:\Git\PSC_EJ1\Library\bin\Debug\netcoreapp3.1\Library.dll
+C:\Git\PSC_EJ1\Library\bin\Debug\netcoreapp3.1\Library.pdb
+C:\Git\PSC_EJ1\Library\obj\Debug\netcoreapp3.1\Library.csproj.AssemblyReference.cache
+C:\Git\PSC_EJ1\Library\obj\Debug\netcoreapp3.1\Library.AssemblyInfoInputs.cache
+C:\Git\PSC_EJ1\Library\obj\Debug\netcoreapp3.1\Library.AssemblyInfo.cs
+C:\Git\PSC_EJ1\Library\obj\Debug\netcoreapp3.1\Library.csproj.CoreCompileInputs.cache
+C:\Git\PSC_EJ1\Library\obj\Debug\netcoreapp3.1\Library.dll
+C:\Git\PSC_EJ1\Library\obj\Debug\netcoreapp3.1\Library.pdb
